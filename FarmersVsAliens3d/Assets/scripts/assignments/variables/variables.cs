@@ -6,14 +6,14 @@ public class variables : MonoBehaviour
 {// Declaration
     public int cookieBox;
     public float waterBottle;
-    private string firstName;
+    private string firstName; 
     public double rbi;
     public GameObject player;
     public float amount;
     public float money;
     public float cost;
 
-
+    
 
 
     // Start is called before the first frame update
@@ -37,11 +37,11 @@ public class variables : MonoBehaviour
 
     }
 
-    void Cookies(float amount, float, money, float, cost)
+    void Cookies(float amount, float money, float cost)
     {
         float total;
 
-        total = money - cost * amount;
+       total = money - cost * amount;
 
         print(total);
     }
@@ -50,5 +50,4 @@ public class variables : MonoBehaviour
     {
         print("Hello World!");
     }
-
 }
