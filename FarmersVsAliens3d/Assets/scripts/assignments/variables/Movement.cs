@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public float speed;
+    public float turnSpeed;
+    public float verticalInput;
+    public float horizontalInput;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,12 +19,15 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, 0.1f);
-        
+        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
     }
 
     // detect collision with another object
-    private void OnCollisionEnter(Collision other)
+   /* private void OnCollisionEnter(Collision other)
     {
 
         if (other.gameObject.CompareTag("Floor"))
@@ -39,4 +48,5 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("You have entered the trigger!");
     }
+    */
 }
