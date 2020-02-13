@@ -6,7 +6,7 @@ public class variables : MonoBehaviour
 {// Declaration
     public int cookieBox;
     public float waterBottle;
-    private string firstName; 
+    
     public double rbi;
     public GameObject player;
     public float amount;
@@ -25,7 +25,7 @@ public class variables : MonoBehaviour
 
 
         cookieBox = 20;
-        firstName = "Bobby";
+  
         Debug.Log("How many cookies are in the box " + cookieBox);
         //Function call
         CheckScore();
