@@ -624,7 +624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.17381229, y: -0, z: -0, w: 0.9847788}
-  m_LocalPosition: {x: 0, y: 3.23, z: -7.95}
+  m_LocalPosition: {x: 0, y: 3.45, z: -8.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -717,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 1077323816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.0748, y: 4.0748, z: 4.0748}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -778,15 +778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8086efce9ce0a894bb96e0c542e52cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cookieBox: 0
-  waterBottle: 0
-  firstName: 
-  rbi: 0
-  player: {fileID: 0}
-  heart: 0
-  feelgood: 0
-  beans: 23
-  farts: 2
 --- !u!4 &1711524286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8953747616781672874, guid: f8cac477451b35543a297fdb9b14ce00,
@@ -800,6 +791,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3751072949381675523, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
         type: 3}
       propertyPath: m_Name
@@ -813,7 +808,7 @@ PrefabInstance:
     - target: {fileID: 3751072949381675528, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 3751072949381675528, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
         type: 3}
@@ -865,7 +860,28 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1711524286}
-    m_RemovedComponents: []
+    - target: {fileID: 3751072949381675524, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853897879684655287, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310803467466185948, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310803467466185948, guid: 93cc4b07e0053084fb0f7ee81e3eccb2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 93cc4b07e0053084fb0f7ee81e3eccb2, type: 3}
 --- !u!1001 &8953747617352149012
 PrefabInstance:
