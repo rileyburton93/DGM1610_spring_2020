@@ -10,10 +10,17 @@ public class Movement : MonoBehaviour
     public float horizontalInput;
 
 
+    public float jumpHeight;
+    public bool isGrounded;
+
+    private Rigidbody rb;
+
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -24,29 +31,54 @@ public class Movement : MonoBehaviour
 
         transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
+
+       
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpHeight * 50);
+        }
     }
 
     // detect collision with another object
-   /* private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.CompareTag("Floor"))
+        if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Obstacle"))
         {
+            isGrounded = true;
             Debug.Log("Colliding with Floor");
         }
-        else if(other.gameObject.CompareTag("Obstacle"))
-        {
-            Debug.Log("Colliding with Obstacle");
-        }
-        else
-        {
-            Debug.Log("...");
-        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Obstacle"))
+        {
+            isGrounded = false;
+            Debug.Log(" Not Colliding with Floor");
+        }
+    }
+        /* else if(other.gameObject.CompareTag("Obstacle"))
+         {
+             Debug.Log("Colliding with Obstacle");
+         }
+         else
+         {
+             Debug.Log("...");
+         }*/
+    
+
+   /* private void OnTriggerEnter(Collider other)
     {
         Debug.Log("You have entered the trigger!");
-    }
-    */
+    }*/
+    
 }
