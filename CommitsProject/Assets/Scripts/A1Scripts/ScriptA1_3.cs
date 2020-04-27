@@ -2,10 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptA1_3 : MonoBehaviour
+public class ScriptA1_3 : A1Obstacle
 {
-    // Start is called before the first frame update
-    void Start()
+    //Color scripts inherit from a1o
+      
+    public override Color DamageColor
+    {
+        get { return Color.red; }
+    }
+   
+}
+
+/* // Start is called before the first frame update
+void Start()
     {
         
     }
@@ -15,4 +24,4 @@ public class ScriptA1_3 : MonoBehaviour
     {
         
     }
-}
+}*/
