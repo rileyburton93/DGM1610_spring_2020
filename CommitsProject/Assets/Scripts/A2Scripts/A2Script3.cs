@@ -3,16 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class A2Script3 : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{   // projectile script
 
-    // Update is called once per frame
-    void Update()
-    {
+   
+        public GameObject projectilePrefab;
+        private Rigidbody rb;
+
+
+        void Start()
+        {
+        rb = GetComponent<Rigidbody>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Instantiate(projectilePrefab, transform.position,
+                    projectilePrefab.transform.rotation);
+            }
+        }
         
-    }
 }

@@ -10,8 +10,11 @@ public class ScriptA1_4 : MonoBehaviour
 
     public const int totalHP = 20;
     //const never changes, this should always display as 20
+
     public int playerHP = totalHP;
+
     public Text yourHP;
+
     public Text hp;
 
     // Update is called once per frame
@@ -22,13 +25,25 @@ public class ScriptA1_4 : MonoBehaviour
         
     }
 
-    public void TakeDamage(int amount)
+    public void TakeHP(int amount)
     {
         playerHP -= amount;
+
         if(playerHP <= 0)
         {
             playerHP = 0;
             print("GAME OVER");
+        }
+    }
+
+    public void GiveHP(int amount)
+    {
+        playerHP += amount;
+
+        if (playerHP >= 20)
+        {
+            playerHP = 20;
+            print("FULL HP");
         }
     }
 
