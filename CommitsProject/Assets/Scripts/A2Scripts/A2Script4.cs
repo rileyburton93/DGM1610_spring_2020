@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class A2Script4 : MonoBehaviour
+public class A2Script4 : A1Obstacle
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public override Color DamageColor
     {
-        
+        get { return Color.green; }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /* // Start is called before the first frame update
+     void Start()
+     {
+
+     }
+
+     // Update is called once per frame
+     void Update()
+     {
+
+     }*/
 }
